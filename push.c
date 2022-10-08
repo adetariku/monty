@@ -12,7 +12,7 @@ static int is_string_only_digits(char *args)
 {
 	unsigned int index;
 	unsigned int len = strlen(args);
-	
+
 	for (index = 0; index < len; index++)
 	{
 		if (args[index] == '-' && index == 0)
@@ -35,7 +35,7 @@ void push(stack_t **head, unsigned int line_number)
 {
 	int n;
 	char *args;
-        
+	
 	args = strtok(NULL, " \n\t\r\v\f");
 
 	if (args == NULL || is_string_only_digits(args))
@@ -46,7 +46,6 @@ void push(stack_t **head, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	n = atoi(args);
-	
 
 	if (to_stack_or_queue == 's')
 		add_node(head, n);
