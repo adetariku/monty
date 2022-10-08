@@ -22,7 +22,6 @@ static int is_string_only_digits(char *args)
 	}
 	return (1);
 }
-  
 /**
  * push - pushes an integer to a stack
  * @head: double pointer to the beginning of the stack
@@ -35,7 +34,7 @@ void push(stack_t **head, unsigned int line_number)
 {
 	int n;
 	char *args;
-	
+
 	args = strtok(NULL, " \n\t\r\v\f");
 
 	if (args == NULL || is_string_only_digits(args))
