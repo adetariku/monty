@@ -1,5 +1,5 @@
 #define _POSIX_C_SOURCE  200809L
-#define _GNU_SOURCE 
+#define _GNU_SOURCE
 #include "monty.h"
 /**
  * get_opcode - reads opcode and checks if valid.
@@ -19,7 +19,7 @@ void get_opcode(stack_t **stack, unsigned int line_number, char *code)
 		{"pop", _pop},
 		{"push", push},
 		{"swap", _swap},
-		{"nop" , _nop},
+		{"nop", _nop},
 		{NULL, NULL}
 	};
 

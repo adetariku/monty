@@ -1,7 +1,6 @@
 #define _POSIX_C_SOURCE  200809L
 #define _GNU_SOURCE
 #include "monty.h"
-
 /**
  * add_node - add a new node to a double linked list
  * @head: double pointer to the beginning of a linked list
@@ -14,12 +13,13 @@
 void add_node(stack_t **head, const int data)
 {
 	stack_t *newnode = NULL;
-	
+
 	newnode = malloc(sizeof(stack_t));
 	if (newnode == NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: malloc failed\n");
-                free_stack_t(*head);
+		free_stack_t(*head);
+
 		exit(EXIT_FAILURE);
 	}
 	newnode->n = data;
@@ -31,7 +31,7 @@ void add_node(stack_t **head, const int data)
 	{
 		newnode->next = *head;
 		(*head)->prev = newnode;
-		*head = newnode; 
+		*head = newnode;
 	}
 }
 

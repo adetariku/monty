@@ -1,5 +1,5 @@
 #define _POSIX_C_SOURCE  200809L
-#define _GNU_SOURCE  
+#define _GNU_SOURCE
 #include "monty.h"
 /**
  * pint -displays the value at the top of the stack

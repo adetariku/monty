@@ -1,5 +1,5 @@
 #define _POSIX_C_SOURCE  200809L
-#define _GNU_SOURCE                                                
+#define _GNU_SOURCE
 #include "monty.h"
 void get_opcode(stack_t **stack, unsigned int line_number, char *code);
 char to_stack_or_queue = 's';
