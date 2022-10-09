@@ -37,7 +37,7 @@ void push(stack_t **head, unsigned int line_number)
 
 	args = strtok(NULL, " \n\t\r\v\f");
 
-	if (args == NULL || is_string_only_digits(args))
+	if (args == NULL || !is_string_only_digits(args))
 	{
 		dprintf(STDOUT_FILENO,
 			"L%u: usage: push integer\n",

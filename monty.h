@@ -37,6 +37,36 @@ typedef struct instruction_s
 } instruction_t;
 
 
+/**
+ * struct param_s - holds all variables to be passed
+ * @STACK_OR_QUEUE: flag to determine stack(0) or queue(1)
+ * @fname: path to a filename
+ * @fp: file pointer to a file
+ * @tokened: tokenized string of our input from file
+ * @head: head of our stack
+ * @line_number: line number that was just read from file
+ * @buf: buffer for the line in the file
+ *
+ * Description: A struct that we make global to pass variables
+ *  for stack, queues, LIFO, FIFO holberton project
+ */
+typedef struct param_s
+{
+	int STACK_OR_QUEUE;
+	char *fname;
+	FILE *fp;
+	char **tokened;
+	char *buf;
+	struct stack_s *head;
+	unsigned int line_number;
+} vars_t;
+
+/** extern vars_t *element; 
+*/
+
+
+
+
 /* global struct to hold flag for queue and stack length */
 extern char to_stack_or_queue;
 
